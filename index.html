@@ -1,7 +1,7 @@
-<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
+/* DESKTOP PARALLAX */
 @media (min-width: 768px) {
   .hero-bg {
     background-image: url('https://i.imgur.com/rXHGitn.jpeg');
@@ -29,28 +29,28 @@
 <div class="text-white font-sans">
 
   <!-- HERO -->
-  <section class="relative">
+  <section class="relative h-[70vh]">
 
     <!-- 📱 MOBILE -->
     <img src="https://i.imgur.com/r1DtZ85.png"
-         class="w-full h-[60vh] object-cover md:hidden" />
+         class="absolute inset-0 w-full h-full object-cover object-[center_top] md:hidden" />
 
     <!-- 💻 DESKTOP -->
-    <div class="hidden md:block hero-bg h-[70vh]"></div>
+    <div class="hidden md:block hero-bg absolute inset-0"></div>
 
     <!-- CONTENIDO -->
-    <div class="absolute inset-0 flex items-center justify-center px-4">
+    <div class="relative z-10 flex items-center justify-center h-full px-4">
       <div class="bg-black/70 p-8 rounded-2xl text-center max-w-md">
 
         <h1 class="text-4xl md:text-5xl font-bold mb-3">REFILL</h1>
-        <p class="text-lg mb-4">Grupo de Oración y Amistad</p>
+        <p class="text-lg md:text-xl mb-4">Grupo de Oración y Amistad</p>
 
-        <p class="text-lg mb-6">
+        <p class="text-lg md:text-xl mb-6">
           Un lugar para recargarnos, compartir y crecer en Dios 🙌
         </p>
 
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO4PlwuOzDeq6o9gauiwM2vicbFJILfKAOwDwOZBXNs16l6w/viewform"
-           class="block bg-white text-black font-bold py-4 rounded-xl">
+           class="block bg-white text-black font-bold py-4 text-lg rounded-xl">
           Quiero unirme
         </a>
 
@@ -70,26 +70,26 @@
 
 
   <!-- SHARING TABLE -->
-  <section class="relative">
+  <section class="relative h-[60vh]">
 
     <!-- 📱 MOBILE -->
     <img src="https://i.imgur.com/y5vaGQ6.png"
-         class="w-full h-[50vh] object-cover md:hidden" />
+         class="absolute inset-0 w-full h-full object-cover object-center md:hidden" />
 
     <!-- 💻 DESKTOP -->
-    <div class="hidden md:block sharing-bg h-[65vh]"></div>
+    <div class="hidden md:block sharing-bg absolute inset-0"></div>
 
     <!-- CONTENIDO -->
-    <div class="absolute inset-0 flex items-center justify-center px-4">
+    <div class="relative z-10 flex items-center justify-center h-full px-4">
       <div class="bg-black/70 p-6 rounded-2xl text-center max-w-md">
 
         <h2 class="text-2xl md:text-3xl font-bold mb-4">Sharing Table 🍽</h2>
 
-        <p class="text-lg">
+        <p class="text-lg md:text-xl">
           En REFILL nos encanta compartir, trae lo que quieras.
         </p>
 
-        <p class="text-lg mt-2">
+        <p class="text-lg md:text-xl mt-2">
           Siempre habrá bebida para hacer REFILL 🧃
         </p>
 
@@ -99,35 +99,34 @@
   </section>
 
 
-  <!-- ESPACIO BLANCO -->
+  <!-- ESPACIO -->
   <div class="h-16 bg-white"></div>
 
 
   <!-- MAPA -->
-  <section class="relative">
+  <section class="relative h-[60vh]">
 
     <!-- 📱 MOBILE -->
     <img src="https://i.imgur.com/emWgTYg.jpeg"
-         class="w-full h-[45vh] object-cover md:hidden" />
+         class="absolute inset-0 w-full h-full object-cover object-center md:hidden" />
 
     <!-- 💻 DESKTOP -->
-    <div class="hidden md:block map-bg h-[60vh]"></div>
+    <div class="hidden md:block map-bg absolute inset-0"></div>
 
     <!-- CONTENIDO -->
-    <div class="absolute inset-0 flex items-center justify-center px-4">
+    <div class="relative z-10 flex items-center justify-center h-full px-4">
       <div class="bg-black/70 p-6 rounded-2xl text-center max-w-md">
 
         <h2 class="text-2xl font-bold mb-4">Nos vemos aquí 📍</h2>
 
-        <p class="text-lg mb-1">Miércoles</p>
-        <p class="text-lg">Casa del Rey</p>
-        <p class="text-lg">(Entrada Casa Kids)</p>
-        <p class="text-sm mb-4">Cll 75 # 47</p>
+        <p class="text-lg">Miércoles</p>
+        <p class="text-lg">Casa del Rey (Casa Kids)</p>
+        <p class="text-sm mb-4">Cra 48 #75-15</p>
 
         <a href="https://maps.app.goo.gl/pExi2RozToHTngfp7"
            target="_blank"
            class="block bg-white text-black font-bold py-3 rounded-xl">
-          Ver en Maps
+          Ver en Google Maps
         </a>
 
       </div>
@@ -136,31 +135,35 @@
   </section>
 
 
-  <!-- CTA FINAL -->
+  <!-- CTA -->
   <section class="bg-gray-900 py-12 px-4">
     <div class="max-w-md mx-auto space-y-4">
 
       <a href="https://chat.whatsapp.com/JY4V2ApY5gn7dXWvL8X21z"
-         class="block bg-white text-black p-4 rounded-xl text-center font-semibold">
+         class="block bg-white text-black p-4 rounded-xl text-center text-lg font-semibold">
         Grupo de WhatsApp
       </a>
 
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTRFewsrGV_uNU6iL7_o83SNg4wGvX2w2owBOepW5S0gGOwg/viewform"
-         class="block bg-white text-black p-4 rounded-xl text-center font-semibold">
+         class="block bg-white text-black p-4 rounded-xl text-center text-lg font-semibold">
         Petición de oración
       </a>
 
-      <!-- NUEVO BOTÓN -->
       <a href="#"
-         class="block bg-white text-black p-4 rounded-xl text-center font-semibold">
-        Quiero hablar con alguien
+         class="block bg-white text-black p-4 rounded-xl text-center text-lg font-semibold">
+        Necesito hablar
       </a>
 
     </div>
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- BOTÓN FLOTANTE -->
+  <a href="https://wa.me/573001234567?text=Hola%20quiero%20info%20de%20REFILL"
+     class="fixed bottom-5 right-5 bg-green-500 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
+     💬
+  </a>
+
   <footer class="bg-black text-center text-sm text-gray-400 py-6">
     © 2026 REFILL
   </footer>
