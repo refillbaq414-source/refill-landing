@@ -2,35 +2,19 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-.hero-bg {
-  background-image: url('https://i.imgur.com/rXHGitn.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sharing-bg {
-  background-image: url('https://i.imgur.com/EgaAJVJ.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* 📱 MOBILE (PRIORIDAD) */
-@media (max-width: 767px) {
-  .hero-bg {
-    background-position: center top; /* muestra mejor caras/manos */
-  }
-
-  .sharing-bg {
-    background-position: center 30%; /* enfoca comida */
-  }
-}
-
-/* 💻 DESKTOP (PARALLAX) */
+/* DESKTOP (parallax real) */
 @media (min-width: 768px) {
-  .hero-bg,
+  .hero-bg {
+    background-image: url('https://i.imgur.com/rXHGitn.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
   .sharing-bg {
+    background-image: url('https://i.imgur.com/EgaAJVJ.jpeg');
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
   }
 }
@@ -39,21 +23,33 @@
 <div class="text-white font-sans">
 
   <!-- HERO -->
- <section class="hero-bg min-h-[60vh] py-16 px-4 flex items-center justify-center">
+  <section class="relative w-full">
 
-    <div class="bg-black/60 p-8 rounded-2xl backdrop-blur-md text-center w-full max-w-md">
+    <!-- 📱 IMAGEN REAL (SOLO MÓVIL) -->
+    <img src="https://i.imgur.com/rXHGitn.jpeg"
+         class="w-full h-[55vh] object-cover md:hidden" />
 
-      <h1 class="text-4xl font-bold mb-3">REFILL</h1>
-      <p class="text-base mb-4 opacity-90">Grupo de Oración y Amistad</p>
+    <!-- 💻 BACKGROUND (SOLO DESKTOP) -->
+    <div class="hidden md:block hero-bg h-[60vh]"></div>
 
-      <p class="text-base mb-6">
-        Un lugar para recargarnos, compartir y crecer en Dios 🙌
-      </p>
+    <!-- CONTENIDO -->
+    <div class="absolute inset-0 flex items-center justify-center px-4">
 
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO4PlwuOzDeq6o9gauiwM2vicbFJILfKAOwDwOZBXNs16l6w/viewform?usp=sharing&ouid=100078733985487058140"
-         class="block bg-white text-black font-bold py-4 text-lg rounded-xl shadow active:scale-95 transition">
-        Quiero unirme
-      </a>
+      <div class="bg-black/70 p-8 rounded-2xl backdrop-blur-md text-center w-full max-w-md">
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-3">REFILL</h1>
+        <p class="text-lg mb-4 opacity-90">Grupo de Oración y Amistad</p>
+
+        <p class="text-lg mb-6">
+          Un lugar para recargarnos, compartir y crecer en Dios 🙌
+        </p>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO4PlwuOzDeq6o9gauiwM2vicbFJILfKAOwDwOZBXNs16l6w/viewform?usp=sharing&ouid=100078733985487058140"
+           class="block bg-white text-black font-bold py-4 text-lg rounded-xl shadow active:scale-95 transition">
+          Quiero unirme
+        </a>
+
+      </div>
 
     </div>
 
@@ -61,8 +57,8 @@
 
 
   <!-- VIDEO -->
-  <section class="bg-white text-gray-800 px-4 py-10">
-    <h2 class="text-xl font-bold text-center mb-6">Bienvenido a REFILL</h2>
+  <section class="bg-white text-gray-800 px-4 py-12">
+    <h2 class="text-2xl font-bold text-center mb-6">Bienvenido a REFILL</h2>
 
     <div class="rounded-xl overflow-hidden shadow-md">
       <iframe 
@@ -75,19 +71,31 @@
 
 
   <!-- SHARING TABLE -->
-<section class="sharing-bg min-h-[50vh] py-16 px-4 flex items-center">
+  <section class="relative">
 
-    <div class="bg-black/70 p-6 rounded-2xl backdrop-blur-md text-center max-w-md mx-auto">
+    <!-- 📱 IMAGEN REAL -->
+    <img src="https://i.imgur.com/EgaAJVJ.jpeg"
+         class="w-full h-[50vh] object-cover md:hidden" />
 
-      <h2 class="text-2xl font-bold mb-4">Sharing Table 🍽</h2>
+    <!-- 💻 BACKGROUND -->
+    <div class="hidden md:block sharing-bg h-[60vh]"></div>
 
-      <p class="text-base">
-        En REFILL nos encanta compartir, por eso trae lo que desees a la mesa.
-      </p>
+    <!-- CONTENIDO -->
+    <div class="absolute inset-0 flex items-center justify-center px-4">
 
-      <p class="text-base mt-3">
-        Siempre tendremos bebida para hacer REFILL 🧃
-      </p>
+      <div class="bg-black/70 p-6 rounded-2xl backdrop-blur-md text-center max-w-md">
+
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Sharing Table 🍽</h2>
+
+        <p class="text-lg">
+          En REFILL nos encanta compartir, por eso trae lo que desees a la mesa.
+        </p>
+
+        <p class="text-lg mt-3">
+          Siempre tendremos bebida para hacer REFILL 🧃
+        </p>
+
+      </div>
 
     </div>
 
@@ -95,11 +103,11 @@
 
 
   <!-- INFO -->
-  <section class="bg-white text-gray-800 px-4 py-10 text-center">
+  <section class="bg-white text-gray-800 px-4 py-12 text-center">
 
-    <h2 class="text-xl font-bold mb-6">Nos vemos aquí 👇</h2>
+    <h2 class="text-2xl font-bold mb-6">Nos vemos aquí 👇</h2>
 
-    <div class="space-y-3 text-base">
+    <div class="space-y-3 text-lg">
 
       <p class="font-semibold">📅 Miércoles</p>
       <p class="font-semibold">📍 Casa del Rey (Casa Kids)</p>
@@ -116,22 +124,22 @@
 
     <div class="max-w-md mx-auto">
 
-      <h2 class="text-xl font-bold text-center mb-6">Conecta con nosotros</h2>
+      <h2 class="text-2xl font-bold text-center mb-6">Conecta con nosotros</h2>
 
       <div class="space-y-4">
 
         <a href="https://chat.whatsapp.com/JY4V2ApY5gn7dXWvL8X21z?mode=gi_t"
-           class="block bg-white text-black p-4 text-base rounded-xl text-center font-semibold">
+           class="block bg-white text-black p-5 text-lg rounded-xl text-center font-semibold">
           Grupo de WhatsApp
         </a>
 
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTRFewsrGV_uNU6iL7_o83SNg4wGvX2w2owBOepW5S0gGOwg/viewform"
-           class="block bg-white text-black p-4 text-base rounded-xl text-center font-semibold">
+           class="block bg-white text-black p-5 text-lg rounded-xl text-center font-semibold">
           Petición de oración
         </a>
 
         <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20REFILL"
-           class="block bg-white text-black p-4 text-base rounded-xl text-center font-semibold">
+           class="block bg-white text-black p-5 text-lg rounded-xl text-center font-semibold">
           Necesito hablar
         </a>
 
