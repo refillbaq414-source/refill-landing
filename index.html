@@ -2,7 +2,6 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-/* DESKTOP (parallax real) */
 @media (min-width: 768px) {
   .hero-bg {
     background-image: url('https://i.imgur.com/rXHGitn.jpeg');
@@ -17,42 +16,43 @@
     background-position: center;
     background-attachment: fixed;
   }
+
+  .map-bg {
+    background-image: url('AQUI_TU_IMAGEN_MAPA');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
 }
 </style>
 
 <div class="text-white font-sans">
 
   <!-- HERO -->
-  <section class="relative w-full">
+  <section class="relative">
 
-    <!-- 📱 IMAGEN REAL (SOLO MÓVIL) -->
     <img src="https://i.imgur.com/rXHGitn.jpeg"
          class="w-full h-[55vh] object-cover md:hidden" />
 
-    <!-- 💻 BACKGROUND (SOLO DESKTOP) -->
     <div class="hidden md:block hero-bg h-[60vh]"></div>
 
-    <!-- CONTENIDO -->
     <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="bg-black/70 p-8 rounded-2xl text-center max-w-md">
 
-      <div class="bg-black/70 p-8 rounded-2xl backdrop-blur-md text-center w-full max-w-md">
-
-        <h1 class="text-4xl md:text-5xl font-bold mb-3">REFILL</h1>
-        <p class="text-lg mb-4 opacity-90">Grupo de Oración y Amistad</p>
+        <h1 class="text-4xl font-bold mb-3">REFILL</h1>
+        <p class="text-lg mb-4">Grupo de Oración y Amistad</p>
 
         <p class="text-lg mb-6">
           Un lugar para recargarnos, compartir y crecer en Dios 🙌
         </p>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO4PlwuOzDeq6o9gauiwM2vicbFJILfKAOwDwOZBXNs16l6w/viewform?usp=sharing&ouid=100078733985487058140"
-           class="block bg-white text-black font-bold py-4 text-lg rounded-xl shadow active:scale-95 transition">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO4PlwuOzDeq6o9gauiwM2vicbFJILfKAOwDwOZBXNs16l6w/viewform"
+           class="block bg-white text-black font-bold py-4 rounded-xl">
           Quiero unirme
         </a>
 
       </div>
-
     </div>
-
   </section>
 
 
@@ -60,113 +60,84 @@
   <section class="bg-white text-gray-800 px-4 py-12">
     <h2 class="text-2xl font-bold text-center mb-6">Bienvenido a REFILL</h2>
 
-    <div class="rounded-xl overflow-hidden shadow-md">
-      <iframe 
-        class="w-full aspect-video"
-        src="https://www.youtube.com/embed/VIDEO_ID"
-        allowfullscreen>
-      </iframe>
-    </div>
+    <iframe class="w-full aspect-video rounded-xl shadow"
+            src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
   </section>
 
 
   <!-- SHARING TABLE -->
   <section class="relative">
 
-    <!-- 📱 IMAGEN REAL -->
     <img src="https://i.imgur.com/EgaAJVJ.jpeg"
          class="w-full h-[50vh] object-cover md:hidden" />
 
-    <!-- 💻 BACKGROUND -->
     <div class="hidden md:block sharing-bg h-[60vh]"></div>
 
-    <!-- CONTENIDO -->
     <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="bg-black/70 p-6 rounded-2xl text-center max-w-md">
 
-      <div class="bg-black/70 p-6 rounded-2xl backdrop-blur-md text-center max-w-md">
-
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">Sharing Table 🍽</h2>
+        <h2 class="text-2xl font-bold mb-4">Sharing Table 🍽</h2>
 
         <p class="text-lg">
-          En REFILL nos encanta compartir, por eso trae lo que desees a la mesa.
+          En REFILL nos encanta compartir, trae lo que quieras.
         </p>
 
-        <p class="text-lg mt-3">
-          Siempre tendremos bebida para hacer REFILL 🧃
+        <p class="text-lg mt-2">
+          Siempre habrá bebida para hacer REFILL 🧃
         </p>
 
       </div>
-
     </div>
-
   </section>
 
 
-<!-- INFO / UBICACIÓN -->
-<section class="relative text-white">
+  <!-- ESPACIO BLANCO -->
+  <div class="h-16 bg-white"></div>
 
-  <!-- IMAGEN DE FONDO (MAPA) -->
-  <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1080"
-       class="w-full h-[50vh] object-cover" />
 
-  <!-- OVERLAY -->
-  <div class="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center px-4">
+  <!-- MAPA -->
+  <section class="relative">
 
-    <h2 class="text-2xl font-bold mb-4">Nos vemos aquí 👇</h2>
+    <img src="https://i.imgur.com/emWgTYg.jpeg"
+         class="w-full h-[40vh] object-cover md:hidden" />
 
-    <div class="space-y-2 text-lg mb-6">
-      <p>📅 Miércoles</p>
-      <p>📍 Casa del Rey (Casa Kids)</p>
-      <p>Cra 48 #75-15</p>
-      <p>Barranquilla, Colombia</p>
+    <div class="hidden md:block map-bg h-[50vh]"></div>
+
+    <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="bg-black/70 p-6 rounded-2xl text-center max-w-md">
+
+        <h2 class="text-2xl font-bold mb-4">Nos vemos aquí 📍</h2>
+
+        <p class="text-lg mb-2">Miércoles</p>
+        <p class="text-lg">Casa del Rey (Casa Kids)</p>
+        <p class="text-sm mb-4">Cra 48 #75-15</p>
+
+        <a href="https://maps.app.goo.gl/pExi2RozToHTngfp7"
+           target="_blank"
+           class="block bg-white text-black font-bold py-3 rounded-xl">
+          Ver ubicación en Google Maps
+        </a>
+
+      </div>
     </div>
-
-    <!-- BOTÓN MAPS -->
-    <a href="https://maps.app.goo.gl/pExi2RozToHTngfp7"
-       target="_blank"
-       class="bg-white text-black px-6 py-3 rounded-xl font-semibold shadow active:scale-95 transition">
-       Ver ubicación en Google Maps
-    </a>
-
-  </div>
-
-</section>
+  </section>
 
 
   <!-- CTA FINAL -->
   <section class="bg-gray-900 py-12 px-4">
+    <div class="max-w-md mx-auto space-y-4">
 
-    <div class="max-w-md mx-auto">
+      <a href="https://chat.whatsapp.com/JY4V2ApY5gn7dXWvL8X21z"
+         class="block bg-white text-black p-4 rounded-xl text-center">
+        Grupo de WhatsApp
+      </a>
 
-      <h2 class="text-2xl font-bold text-center mb-6">Conecta con nosotros</h2>
-
-      <div class="space-y-4">
-
-        <a href="https://chat.whatsapp.com/JY4V2ApY5gn7dXWvL8X21z?mode=gi_t"
-           class="block bg-white text-black p-5 text-lg rounded-xl text-center font-semibold">
-          Grupo de WhatsApp
-        </a>
-
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTRFewsrGV_uNU6iL7_o83SNg4wGvX2w2owBOepW5S0gGOwg/viewform"
-           class="block bg-white text-black p-5 text-lg rounded-xl text-center font-semibold">
-          Petición de oración
-        </a>
-
-        <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20REFILL"
-           class="block bg-white text-black p-5 text-lg rounded-xl text-center font-semibold">
-          Quiero hablar con alguien
-        </a>
-
-      </div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTRFewsrGV_uNU6iL7_o83SNg4wGvX2w2owBOepW5S0gGOwg/viewform"
+         class="block bg-white text-black p-4 rounded-xl text-center">
+        Petición de oración
+      </a>
 
     </div>
-
   </section>
-
-
-  <!-- FOOTER -->
-  <footer class="bg-black text-center text-sm text-gray-400 py-6">
-    © 2026 REFILL
-  </footer>
 
 </div>
