@@ -16,7 +16,18 @@
   background-repeat: no-repeat;
 }
 
-/* Parallax SOLO en pantallas grandes */
+/* 📱 MOBILE (PRIORIDAD) */
+@media (max-width: 767px) {
+  .hero-bg {
+    background-position: center top; /* muestra mejor caras/manos */
+  }
+
+  .sharing-bg {
+    background-position: center 30%; /* enfoca comida */
+  }
+}
+
+/* 💻 DESKTOP (PARALLAX) */
 @media (min-width: 768px) {
   .hero-bg,
   .sharing-bg {
@@ -28,7 +39,7 @@
 <div class="text-white font-sans">
 
   <!-- HERO -->
-  <section class="hero-bg py-20 px-4 flex items-center justify-center">
+ <section class="hero-bg min-h-[60vh] py-16 px-4 flex items-center justify-center">
 
     <div class="bg-black/60 p-8 rounded-2xl backdrop-blur-md text-center w-full max-w-md">
 
@@ -64,7 +75,7 @@
 
 
   <!-- SHARING TABLE -->
-  <section class="sharing-bg py-20 px-4">
+<section class="sharing-bg min-h-[50vh] py-16 px-4 flex items-center">
 
     <div class="bg-black/70 p-6 rounded-2xl backdrop-blur-md text-center max-w-md mx-auto">
 
