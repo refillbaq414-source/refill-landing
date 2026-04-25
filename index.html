@@ -102,21 +102,35 @@
   </section>
 
 
-  <!-- INFO -->
-  <section class="bg-white text-gray-800 px-4 py-12 text-center">
+<!-- INFO / UBICACIÓN -->
+<section class="relative text-white">
 
-    <h2 class="text-2xl font-bold mb-6">Nos vemos aquí 👇</h2>
+  <!-- IMAGEN DE FONDO (MAPA) -->
+  <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1080"
+       class="w-full h-[50vh] object-cover" />
 
-    <div class="space-y-3 text-lg">
+  <!-- OVERLAY -->
+  <div class="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center px-4">
 
-      <p class="font-semibold">📅 Miércoles</p>
-      <p class="font-semibold">📍 Casa del Rey (Casa Kids)</p>
-      <p class="text-gray-600">Cra 48 #75-15</p>
-      <p class="text-gray-600">Barranquilla, Colombia</p>
+    <h2 class="text-2xl font-bold mb-4">Nos vemos aquí 👇</h2>
 
+    <div class="space-y-2 text-lg mb-6">
+      <p>📅 Miércoles</p>
+      <p>📍 Casa del Rey (Casa Kids)</p>
+      <p>Cra 48 #75-15</p>
+      <p>Barranquilla, Colombia</p>
     </div>
 
-  </section>
+    <!-- BOTÓN MAPS -->
+    <a href="https://maps.app.goo.gl/pExi2RozToHTngfp7"
+       target="_blank"
+       class="bg-white text-black px-6 py-3 rounded-xl font-semibold shadow active:scale-95 transition">
+       Ver ubicación en Google Maps
+    </a>
+
+  </div>
+
+</section>
 
 
   <!-- CTA FINAL -->
